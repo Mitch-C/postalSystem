@@ -1,0 +1,101 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Creative - Bootstrap 3 Responsive Admin Template')
+    meta(name='author', content='GeeksLabs')
+    meta(name='keyword', content='Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal')
+    link(rel='shortcut icon', href='images/favicon.png')
+    title Charts | Creative - Bootstrap 3 Responsive Admin Template
+    // Bootstrap CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    // bootstrap theme
+    link(href='stylesheets/bootstrap-theme.css', rel='stylesheet')
+    // external css
+    // font icon
+    link(href='stylesheets/elegant-icons-style.css', rel='stylesheet')
+    link(href='stylesheets/font-awesome.min.css', rel='stylesheet')
+    // Custom styles
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5
+    //if lt IE 9
+      script(src='javascripts/js/html5shiv.js')
+      script(src='javascripts/js/respond.min.js')
+      script(src='javascripts/js/lte-ie7.js')
+
+
+    body
+     aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul.sidebar-menu
+            li.active
+              a(href='/index')
+                i.icon_house_alt
+                |                           
+                span Dashboard
+            | &#x9;&#x9;&#x9;&#x9;  
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_document_alt
+                |                           
+                span Forms
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='form_component.html') Form Elements
+                |                           
+                |                           
+                li
+                  a(href='form_validation.html') Form Validation
+            |        
+            |                   
+           
+                         
+            li
+              a(href='/chart')
+                i.icon_piechart
+                |                           
+                span Charts
+            |                              
+            |                   
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_table
+                |                           
+                span Tables
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='/table') Basic Table
+            |                   
+            |                   
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_documents_alt
+                |                           
+                span Pages
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='profile.html') Profile
+                |                           
+                li
+                  a(href='/login')
+                    span Login Page
+                |                           
+                li
+                  a(href='/blank') Blank Page
+                |                           
+                li
+                  a(href='/404') 404 Error
+          // sidebar menu end
+      // sidebar end

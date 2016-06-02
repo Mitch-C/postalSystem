@@ -1,0 +1,723 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Creative - Bootstrap 3 Responsive Admin Template')
+    meta(name='author', content='GeeksLabs')
+    meta(name='keyword', content='Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal')
+    link(rel='shortcut icon', href='img/favicon.png')
+    title Form Component | Creative - Bootstrap 3 Responsive Admin Template
+    // Bootstrap CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // bootstrap theme
+    link(href='css/bootstrap-theme.css', rel='stylesheet')
+    // external css
+    // font icon
+    link(href='css/elegant-icons-style.css', rel='stylesheet')
+    link(href='css/font-awesome.min.css', rel='stylesheet')
+    // date picker
+    // color picker
+    // Custom styles
+    link(href='css/style.css', rel='stylesheet')
+    link(href='css/style-responsive.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5
+    //if lt IE 9
+      script(src='js/html5shiv.js')
+      script(src='js/respond.min.js')
+      script(src='js/lte-ie7.js')
+  body
+    // container section start
+    section#container
+      // header start
+      header.header.dark-bg
+        .toggle-nav
+          .icon-reorder.tooltips(data-original-title='Toggle Navigation', data-placement='bottom')
+            i.icon_menu
+        // logo start
+        a.logo(href='index.html')
+          | Nice 
+          span.lite Admin
+        // logo end
+        #top_menu.nav.search-row
+          // search form start
+          ul.nav.top-menu
+            li
+              form.navbar-form
+                input.form-control(placeholder='Search', type='text')
+          // search form end
+        .top-nav.notification-row
+          // notificatoin dropdown start
+          ul.nav.pull-right.top-menu
+            // task notificatoin start
+            li#task_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.icon-task-l
+                  span.badge.bg-important 5
+              ul.dropdown-menu.extended.tasks-bar
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 5 pending tasks
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Design PSD 
+                      .percent 90%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100', style='width: 90%')
+                        span.sr-only 90% Complete (success)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc
+                        | Project 1
+                      .percent 30%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100', style='width: 30%')
+                        span.sr-only 30% Complete (warning)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Digital Marketing
+                      .percent 80%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Logo Designing
+                      .percent 78%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%')
+                        span.sr-only 78% Complete (danger)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Mobile App
+                      .percent 50%
+                    .progress.progress-striped.active
+                      .progress-bar(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 50%')
+                        span.sr-only 50% Complete
+                li.external
+                  a(href='#') See All Tasks
+            // task notificatoin end
+            // inbox notificatoin start
+            li#mail_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-envelope-l
+                span.badge.bg-important 5
+              ul.dropdown-menu.extended.inbox
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 5 new messages
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini.jpg')
+                    span.subject
+                      span.from Greg  Martin
+                      span.time 1 min
+                    span.message
+                      | I really like this admin panel.
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini2.jpg')
+                    span.subject
+                      span.from Bob   Mckenzie
+                      span.time 5 mins
+                    span.message
+                      | Hi, What is next project plan?
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini3.jpg')
+                    span.subject
+                      span.from Phillip   Park
+                      span.time 2 hrs
+                    span.message
+                      | I am like to buy this Admin Template.
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini4.jpg')
+                    span.subject
+                      span.from Ray   Munoz
+                      span.time 1 day
+                    span.message
+                      | Icon fonts are great.
+                li
+                  a(href='#') See all messages
+            // inbox notificatoin end
+            // alert notification start
+            li#alert_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-bell-l
+                span.badge.bg-important 7
+              ul.dropdown-menu.extended.notification
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 4 new notifications
+                li
+                  a(href='#')
+                    span.label.label-primary
+                      i.icon_profile
+                    |                                     Friend Request
+                    span.small.italic.pull-right 5 mins
+                li
+                  a(href='#')
+                    span.label.label-warning
+                      i.icon_pin
+                    |                                     John location.
+                    span.small.italic.pull-right 50 mins
+                li
+                  a(href='#')
+                    span.label.label-danger
+                      i.icon_book_alt
+                    |                                     Project 3 Completed.
+                    span.small.italic.pull-right 1 hr
+                li
+                  a(href='#')
+                    span.label.label-success
+                      i.icon_like
+                    |                                     Mick appreciated your work.
+                    span.small.italic.pull-right  Today
+                li
+                  a(href='#') See all notifications
+            // alert notification end
+            // user login dropdown start
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.profile-ava
+                  img(alt='', src='img/avatar1_small.jpg')
+                span.username Jenifer Smith
+                b.caret
+              ul.dropdown-menu.extended.logout
+                .log-arrow-up
+                li.eborder-top
+                  a(href='#')
+                    i.icon_profile
+                    |  My Profile
+                li
+                  a(href='#')
+                    i.icon_mail_alt
+                    |  My Inbox
+                li
+                  a(href='#')
+                    i.icon_clock_alt
+                    |  Timeline
+                li
+                  a(href='#')
+                    i.icon_chat_alt
+                    |  Chats
+                li
+                  a(href='login.html')
+                    i.icon_key_alt
+                    |  Log Out
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+            // user login dropdown end
+          // notificatoin dropdown end
+      // header end
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul.sidebar-menu
+            li.active
+              a(href='index.html')
+                i.icon_house_alt
+                span Dashboard
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_document_alt
+                span Forms
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='form_component.html') Form Elements
+                li
+                  a(href='form_validation.html') Form Validation
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_desktop
+                span UI Fitures
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='general.html') Components
+                li
+                  a(href='buttons.html') Buttons
+                li
+                  a(href='grids.html') Grids
+            li
+              a(href='widgets.html')
+                i.icon_genius
+                span Widgets
+            li
+              a(href='chart-chartjs.html')
+                i.icon_piechart
+                span Charts
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_table
+                span Tables
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='basic_table.html') Basic Table
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_documents_alt
+                span Pages
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='profile.html') Profile
+                li
+                  a(href='login.html')
+                    span Login Page
+                li
+                  a(href='blank.html') Blank Page
+                li
+                  a(href='404.html') 404 Error
+          // sidebar menu end
+      // sidebar end
+      // main content start
+      section#main-content
+        section.wrapper
+          .row
+            .col-lg-12
+              h3.page-header
+                i.fa.fa-file-text-o
+                |  Form elements
+              ol.breadcrumb
+                li
+                  i.fa.fa-home
+                  a(href='index.html') Home
+                li
+                  i.icon_document_alt
+                  | Forms
+                li
+                  i.fa.fa-file-text-o
+                  | Form elements
+          .row
+            .col-lg-12
+              section.panel
+                header.panel-heading
+                  | Form Elements
+                .panel-body
+                  form.form-horizontal(method='get')
+                    .form-group
+                      label.col-sm-2.control-label Default
+                      .col-sm-10
+                        input.form-control(type='text')
+                    .form-group
+                      label.col-sm-2.control-label Help text
+                      .col-sm-10
+                        input.form-control(type='text')
+                        span.help-block A block of help text that breaks onto a new line and may extend beyond one line.
+                    .form-group
+                      label.col-sm-2.control-label Rounder
+                      .col-sm-10
+                        input.form-control.round-input(type='text')
+                    .form-group
+                      label.col-sm-2.control-label Input focus
+                      .col-sm-10
+                        input#focusedInput.form-control(type='text', value='This is focused...')
+                    .form-group
+                      label.col-sm-2.control-label Disabled
+                      .col-sm-10
+                        input#disabledInput.form-control(type='text', placeholder='Disabled input here...', disabled='')
+                    .form-group
+                      label.col-sm-2.control-label Placeholder
+                      .col-sm-10
+                        input.form-control(type='text', placeholder='placeholder')
+                    .form-group
+                      label.col-sm-2.control-label Password
+                      .col-sm-10
+                        input.form-control(type='password', placeholder='')
+                    .form-group
+                      label.col-lg-2.control-label Static control
+                      .col-lg-10
+                        p.form-control-static email@example.com
+              section.panel
+                .panel-body
+                  form.form-horizontal(method='get')
+                    .form-group.has-success
+                      label.control-label.col-lg-2(for='inputSuccess') Input with success
+                      .col-lg-10
+                        input#inputSuccess.form-control(type='text')
+                    .form-group.has-warning
+                      label.control-label.col-lg-2(for='inputWarning') Input with warning
+                      .col-lg-10
+                        input#inputWarning.form-control(type='text')
+                    .form-group.has-error
+                      label.control-label.col-lg-2(for='inputError') Input with error
+                      .col-lg-10
+                        input#inputError.form-control(type='text')
+              section.panel
+                .panel-body
+                  form.form-horizontal(method='get')
+                    .form-group
+                      label.control-label.col-lg-2(for='inputSuccess') Control sizing
+                      .col-lg-10
+                        input.form-control.input-lg.m-bot15(type='text', placeholder='.input-lg')
+                        input.form-control.m-bot15(type='text', placeholder='Default input')
+                        input.form-control.input-sm.m-bot15(type='text', placeholder='.input-sm')
+                        select.form-control.input-lg.m-bot15
+                          option Option 1
+                          option Option 2
+                          option Option 3
+                        select.form-control.m-bot15
+                          option Option 1
+                          option Option 2
+                          option Option 3
+                        select.form-control.input-sm.m-bot15
+                          option Option 1
+                          option Option 2
+                          option Option 3
+              section.panel
+                .panel-body
+                  form.form-horizontal(method='get')
+                    .form-group
+                      label.control-label.col-lg-2(for='inputSuccess') Checkboxes and radios
+                      .col-lg-10
+                        .checkbox
+                          label
+                            input(type='checkbox', value='')
+                            |                                                   Option one is this and that—be sure to include why it's great
+                        .checkbox
+                          label
+                            input(type='checkbox', value='')
+                            |                                                   Option one is this and that—be sure to include why it's great option one
+                        .radio
+                          label
+                            input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+                            |                                                   Option one is this and that—be sure to include why it's great
+                        .radio
+                          label
+                            input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+                            |                                                   Option two can be something else and selecting it will deselect option one
+                    .form-group
+                      label.control-label.col-lg-2(for='inputSuccess') Inline checkboxes
+                      .col-lg-10
+                        label.checkbox-inline
+                          input#inlineCheckbox1(type='checkbox', value='option1')
+                          |  1
+                        label.checkbox-inline
+                          input#inlineCheckbox2(type='checkbox', value='option2')
+                          |  2
+                        label.checkbox-inline
+                          input#inlineCheckbox3(type='checkbox', value='option3')
+                          |  3
+                    .form-group
+                      label.control-label.col-lg-2(for='inputSuccess') Selects
+                      .col-lg-10
+                        select.form-control.m-bot15
+                          option 1
+                          option 2
+                          option 3
+                          option 4
+                          option 5
+                        select.form-control(multiple='')
+                          option 1
+                          option 2
+                          option 3
+                          option 4
+                          option 5
+                    .form-group
+                      label.control-label.col-lg-2(for='inputSuccess') Column sizing
+                      .col-lg-10
+                        .row
+                          .col-lg-2
+                            input.form-control(type='text', placeholder='.col-lg-2')
+                          .col-lg-3
+                            input.form-control(type='text', placeholder='.col-lg-3')
+                          .col-lg-4
+                            input.form-control(type='text', placeholder='.col-lg-4')
+          // Basic Forms & Horizontal Forms
+          .row
+            .col-lg-6
+              section.panel
+                header.panel-heading
+                  | Basic Forms
+                .panel-body
+                  form(role='form')
+                    .form-group
+                      label(for='exampleInputEmail1') Email address
+                      input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+                    .form-group
+                      label(for='exampleInputPassword1') Password
+                      input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                    .form-group
+                      label(for='exampleInputFile') File input
+                      input#exampleInputFile(type='file')
+                      p.help-block Example block-level help text here.
+                    .checkbox
+                      label
+                        input(type='checkbox')
+                        |  Check me out
+                    button.btn.btn-primary(type='submit') Submit
+            .col-lg-6
+              section.panel
+                header.panel-heading
+                  | Horizontal Forms
+                .panel-body
+                  form.form-horizontal(role='form')
+                    .form-group
+                      label.col-lg-2.control-label(for='inputEmail1') Email
+                      .col-lg-10
+                        input#inputEmail1.form-control(type='email', placeholder='Email')
+                        p.help-block Example block-level help text here.
+                    .form-group
+                      label.col-lg-2.control-label(for='inputPassword1') Password
+                      .col-lg-10
+                        input#inputPassword1.form-control(type='password', placeholder='Password')
+                    .form-group
+                      .col-lg-offset-2.col-lg-10
+                        .checkbox
+                          label
+                            input(type='checkbox')
+                            |  Remember me
+                    .form-group
+                      .col-lg-offset-2.col-lg-10
+                        button.btn.btn-danger(type='submit') Sign in
+              section.panel
+                .panel-body
+                  a.btn.btn-primary(href='#myModal', data-toggle='modal')
+                    | Form in Modal
+                  a.btn.btn-warning(href='#myModal-1', data-toggle='modal')
+                    | Form in Modal 2
+                  a.btn.btn-danger(href='#myModal-2', data-toggle='modal')
+                    | Form in Modal 3
+                  #myModal.modal.fade(aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header
+                          button.close(aria-hidden='true', data-dismiss='modal', type='button') ×
+                          h4.modal-title Form Tittle
+                        .modal-body
+                          form(role='form')
+                            .form-group
+                              label(for='exampleInputEmail1') Email address
+                              input#exampleInputEmail3.form-control(type='email', placeholder='Enter email')
+                            .form-group
+                              label(for='exampleInputPassword1') Password
+                              input#exampleInputPassword3.form-control(type='password', placeholder='Password')
+                            .form-group
+                              label(for='exampleInputFile') File input
+                              input#exampleInputFile3(type='file')
+                              p.help-block Example block-level help text here.
+                            .checkbox
+                              label
+                                input(type='checkbox')
+                                |  Check me out
+                            button.btn.btn-primary(type='submit') Submit
+                  #myModal-1.modal.fade(aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header
+                          button.close(aria-hidden='true', data-dismiss='modal', type='button') ×
+                          h4.modal-title Form Tittle
+                        .modal-body
+                          form.form-horizontal(role='form')
+                            .form-group
+                              label.col-lg-2.control-label(for='inputEmail1') Email
+                              .col-lg-10
+                                input#inputEmail4.form-control(type='email', placeholder='Email')
+                            .form-group
+                              label.col-lg-2.control-label(for='inputPassword1') Password
+                              .col-lg-10
+                                input#inputPassword4.form-control(type='password', placeholder='Password')
+                            .form-group
+                              .col-lg-offset-2.col-lg-10
+                                .checkbox
+                                  label
+                                    input(type='checkbox')
+                                    |  Remember me
+                            .form-group
+                              .col-lg-offset-2.col-lg-10
+                                button.btn.btn-info(type='submit') Sign in
+                  #myModal-2.modal.fade(aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header
+                          button.close(aria-hidden='true', data-dismiss='modal', type='button') ×
+                          h4.modal-title Form Tittle
+                        .modal-body
+                          form.form-inline(role='form')
+                            .form-group
+                              label.sr-only(for='exampleInputEmail2') Email address
+                              input#exampleInputEmail5.form-control.sm-input(type='email', placeholder='Enter email')
+                            .form-group
+                              label.sr-only(for='exampleInputPassword2') Password
+                              input#exampleInputPassword5.form-control.sm-input(type='password', placeholder='Password')
+                            .checkbox
+                              label
+                                input(type='checkbox')
+                                |  Remember me
+                            button.btn.btn-success(type='submit') Sign in
+          // Inline form
+          .row
+            .col-lg-12
+              section.panel
+                header.panel-heading
+                  | Inline form
+                .panel-body
+                  form.form-inline(role='form')
+                    .form-group
+                      label.sr-only(for='exampleInputEmail2') Email address
+                      input#exampleInputEmail2.form-control(type='email', placeholder='Enter email')
+                    .form-group
+                      label.sr-only(for='exampleInputPassword2') Password
+                      input#exampleInputPassword2.form-control(type='password', placeholder='Password')
+                    .checkbox
+                      label
+                        input(type='checkbox')
+                        |  Remember me
+                    button.btn.btn-primary(type='submit') Sign in
+          .row
+            .col-lg-12
+              .row
+                .col-lg-6
+                  section.panel
+                    header.panel-heading
+                      | Color Pickers & Date Pickers
+                    .panel-body
+                      form.form-horizontal(action='#')
+                        // date picker start
+                        .form-group
+                          label.control-label.col-sm-4 Default Datepicker
+                          .col-sm-6
+                            input#cp1.form-control(type='text', value='28-10-2013', size='16')
+                        .form-group
+                          label.control-label.col-sm-4 Starts with years view
+                          .col-sm-6
+                            #dpYears.input-append.date(data-date='18-06-2013', data-date-format='dd-mm-yyyy', data-date-viewmode='years')
+                              input.form-control(size='16', type='text', value='28-06-2013', readonly='')
+                              span.add-on
+                                i.icon-calendar
+                        .form-group
+                          label.control-label.col-sm-4  Date Ranges
+                          .col-sm-6
+                            .input-prepend
+                              input#reservation.form-control(type='text')
+                        // date picker end
+                        // color picker start
+                        .form-group
+                          label.control-label.col-sm-4 Default
+                          .col-sm-5
+                            input.cp1.form-control(type='text', value='#CCCCCC')
+                        .form-group
+                          label.control-label.col-sm-4 RGBA
+                          .col-sm-5
+                            input.cp2.form-control(type='text', data-color-format='rgba', value='rgb(255,255,255,1)')
+                        // color picker end
+                  section.panel
+                    header.panel-heading
+                      | Tags Input
+                    .panel-body
+                      input#tagsinput.tagsinput(name='tagsinput', value='Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal')
+                .col-lg-6
+                  section.panel
+                    header.panel-heading
+                      | Custom Checkbox & Radio
+                    .panel-body
+                      form(action='#', method='get', accept-charset='utf-8')
+                        .checkboxes
+                          label.label_check(for='checkbox-01')
+                            input#checkbox-01(name='sample-checkbox-01', value='1', type='checkbox', checked='')
+                            |  I agree to the terms & conditions.
+                          label.label_check(for='checkbox-02')
+                            input#checkbox-02(name='sample-checkbox-02', value='1', type='checkbox')
+                            |  Please send me regular updates.
+                          label.label_check(for='checkbox-03')
+                            input#checkbox-03(name='sample-checkbox-02', value='1', type='checkbox')
+                            |  This is nice checkbox.
+                        .radios
+                          label.label_radio(for='radio-01')
+                            input#radio-01(name='sample-radio', value='1', type='radio', checked='')
+                            |  This is option A...
+                          label.label_radio(for='radio-02')
+                            input#radio-02(name='sample-radio', value='1', type='radio')
+                            |  and this is option B...
+                          label.label_radio(for='radio-03')
+                            input#radio-03(name='sample-radio', value='1', type='radio')
+                            |  or simply choose option C
+                  section.panel
+                    header.panel-heading
+                      | Switch
+                    .panel-body
+                      .row.m-bot15
+                        .col-sm-6.text-center
+                          input(type='checkbox', checked='', data-toggle='switch')
+                        .col-sm-6.text-center
+                          input(type='checkbox', data-toggle='switch')
+                      .row.m-bot15
+                        .col-sm-6.text-center
+                          .switch.switch-square(data-on-label="<i class=' icon-ok'></i>", data-off-label="<i class='icon-remove'></i>")
+                            input(type='checkbox')
+                        .col-sm-6.text-center
+                          .switch.switch-square(data-on-label="<i class=' icon-ok'></i>", data-off-label="<i class='icon-remove'></i>")
+                            input(type='checkbox', checked='')
+                      .row
+                        .col-sm-6.text-center
+                          input(type='checkbox', disabled='', data-toggle='switch')
+                        .col-sm-6.text-center
+                          input(type='checkbox', checked='', disabled='', data-toggle='switch')
+              .row
+                // Bootsrep Editor
+                .col-lg-12
+                  section.panel
+                    header.panel-heading
+                      | Bootsrep Editor
+                    .panel-body
+                      #editor.btn-toolbar(data-role='editor-toolbar', data-target='#editor')
+                // CKEditor
+                .col-lg-12
+                  section.panel
+                    header.panel-heading
+                      | CKEditor
+                    .panel-body
+                      .form
+                        form.form-horizontal(action='#')
+                          .form-group
+                            label.control-label.col-sm-2 CKEditor
+                            .col-sm-10
+                              textarea.form-control.ckeditor(name='editor1', rows='6')
+          // page end
+      // main content end
+    // container section end
+    // javascripts
+    script(src='js/jquery.js')
+    script(src='js/bootstrap.min.js')
+    // nice scroll
+    script(src='js/jquery.scrollTo.min.js')
+    script(src='js/jquery.nicescroll.js', type='text/javascript')
+    // jquery ui
+    script(src='js/jquery-ui-1.9.2.custom.min.js')
+    // custom checkbox & radio
+    script(type='text/javascript', src='js/ga.js')
+    // custom switch
+    script(src='js/bootstrap-switch.js')
+    // custom tagsinput
+    script(src='js/jquery.tagsinput.js')
+    // colorpicker
+    // bootstrap-wysiwyg
+    script(src='js/jquery.hotkeys.js')
+    script(src='js/bootstrap-wysiwyg.js')
+    script(src='js/bootstrap-wysiwyg-custom.js')
+    // ck editor
+    script(type='text/javascript', src='assets/ckeditor/ckeditor.js')
+    // custom form component script for this page
+    script(src='js/form-component.js')
+    // custome script for all page
+    script(src='js/scripts.js')

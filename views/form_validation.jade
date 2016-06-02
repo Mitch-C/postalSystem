@@ -1,0 +1,416 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Creative - Bootstrap 3 Responsive Admin Template')
+    meta(name='author', content='GeeksLabs')
+    meta(name='keyword', content='Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal')
+    link(rel='shortcut icon', href='img/favicon.png')
+    title Form Validation | Creative - Bootstrap 3 Responsive Admin Template
+    // Bootstrap CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // bootstrap theme
+    link(href='css/bootstrap-theme.css', rel='stylesheet')
+    // external css
+    // font icon
+    link(href='css/elegant-icons-style.css', rel='stylesheet')
+    link(href='css/font-awesome.min.css', rel='stylesheet')
+    // Custom styles
+    link(href='css/style.css', rel='stylesheet')
+    link(href='css/style-responsive.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5
+    //if lt IE 9
+      script(src='js/html5shiv.js')
+      script(src='js/respond.min.js')
+      script(src='js/lte-ie7.js')
+  body
+    // container section start
+    section#container
+      // header start
+      header.header.dark-bg
+        .toggle-nav
+          .icon-reorder.tooltips(data-original-title='Toggle Navigation', data-placement='bottom')
+            i.icon_menu
+        // logo start
+        a.logo(href='index.html')
+          | Nice 
+          span.lite Admin
+        // logo end
+        #top_menu.nav.search-row
+          // search form start
+          ul.nav.top-menu
+            li
+              form.navbar-form
+                input.form-control(placeholder='Search', type='text')
+          // search form end
+        .top-nav.notification-row
+          // notificatoin dropdown start
+          ul.nav.pull-right.top-menu
+            // task notificatoin start
+            li#task_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.icon-task-l
+                  span.badge.bg-important 5
+              ul.dropdown-menu.extended.tasks-bar
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 5 pending tasks
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Design PSD 
+                      .percent 90%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100', style='width: 90%')
+                        span.sr-only 90% Complete (success)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc
+                        | Project 1
+                      .percent 30%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100', style='width: 30%')
+                        span.sr-only 30% Complete (warning)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Digital Marketing
+                      .percent 80%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Logo Designing
+                      .percent 78%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%')
+                        span.sr-only 78% Complete (danger)
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Mobile App
+                      .percent 50%
+                    .progress.progress-striped.active
+                      .progress-bar(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 50%')
+                        span.sr-only 50% Complete
+                li.external
+                  a(href='#') See All Tasks
+            // task notificatoin end
+            // inbox notificatoin start
+            li#mail_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-envelope-l
+                span.badge.bg-important 5
+              ul.dropdown-menu.extended.inbox
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 5 new messages
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini.jpg')
+                    span.subject
+                      span.from Greg  Martin
+                      span.time 1 min
+                    span.message
+                      | I really like this admin panel.
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini2.jpg')
+                    span.subject
+                      span.from Bob   Mckenzie
+                      span.time 5 mins
+                    span.message
+                      | Hi, What is next project plan?
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini3.jpg')
+                    span.subject
+                      span.from Phillip   Park
+                      span.time 2 hrs
+                    span.message
+                      | I am like to buy this Admin Template.
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./img/avatar-mini4.jpg')
+                    span.subject
+                      span.from Ray   Munoz
+                      span.time 1 day
+                    span.message
+                      | Icon fonts are great.
+                li
+                  a(href='#') See all messages
+            // inbox notificatoin end
+            // alert notification start
+            li#alert_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-bell-l
+                span.badge.bg-important 7
+              ul.dropdown-menu.extended.notification
+                .notify-arrow.notify-arrow-blue
+                li
+                  p.blue You have 4 new notifications
+                li
+                  a(href='#')
+                    span.label.label-primary
+                      i.icon_profile
+                    |                                     Friend Request
+                    span.small.italic.pull-right 5 mins
+                li
+                  a(href='#')
+                    span.label.label-warning
+                      i.icon_pin
+                    |                                     John location.
+                    span.small.italic.pull-right 50 mins
+                li
+                  a(href='#')
+                    span.label.label-danger
+                      i.icon_book_alt
+                    |                                     Project 3 Completed.
+                    span.small.italic.pull-right 1 hr
+                li
+                  a(href='#')
+                    span.label.label-success
+                      i.icon_like
+                    |                                     Mick appreciated your work.
+                    span.small.italic.pull-right  Today
+                li
+                  a(href='#') See all notifications
+            // alert notification end
+            // user login dropdown start
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.profile-ava
+                  img(alt='', src='img/avatar1_small.jpg')
+                span.username Jenifer Smith
+                b.caret
+              ul.dropdown-menu.extended.logout
+                .log-arrow-up
+                li.eborder-top
+                  a(href='#')
+                    i.icon_profile
+                    |  My Profile
+                li
+                  a(href='#')
+                    i.icon_mail_alt
+                    |  My Inbox
+                li
+                  a(href='#')
+                    i.icon_clock_alt
+                    |  Timeline
+                li
+                  a(href='#')
+                    i.icon_chat_alt
+                    |  Chats
+                li
+                  a(href='login.html')
+                    i.icon_key_alt
+                    |  Log Out
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+            // user login dropdown end
+          // notificatoin dropdown end
+      // header end
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul.sidebar-menu
+            li.active
+              a(href='index.html')
+                i.icon_house_alt
+                span Dashboard
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_document_alt
+                span Forms
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='form_component.html') Form Elements
+                li
+                  a(href='form_validation.html') Form Validation
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_desktop
+                span UI Fitures
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='general.html') Components
+                li
+                  a(href='buttons.html') Buttons
+                li
+                  a(href='grids.html') Grids
+            li
+              a(href='widgets.html')
+                i.icon_genius
+                span Widgets
+            li
+              a(href='chart-chartjs.html')
+                i.icon_piechart
+                span Charts
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_table
+                span Tables
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='basic_table.html') Basic Table
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_documents_alt
+                span Pages
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(href='profile.html') Profile
+                li
+                  a(href='login.html')
+                    span Login Page
+                li
+                  a(href='blank.html') Blank Page
+                li
+                  a(href='404.html') 404 Error
+          // sidebar menu end
+      // sidebar end
+      // main content start
+      section#main-content
+        section.wrapper
+          .row
+            .col-lg-12
+              h3.page-header
+                i.fa.fa-files-o
+                |  Form Validation
+              ol.breadcrumb
+                li
+                  i.fa.fa-home
+                  a(href='index.html') Home
+                li
+                  i.icon_document_alt
+                  | Forms
+                li
+                  i.fa.fa-files-o
+                  | Form Validation
+          // Form validations
+          .row
+            .col-lg-12
+              section.panel
+                header.panel-heading
+                  | Form validations
+                .panel-body
+                  .form
+                    form#feedback_form.form-validate.form-horizontal(method='get', action='')
+                      .form-group
+                        label.control-label.col-lg-2(for='cname')
+                          | Full Name 
+                          span.required *
+                        .col-lg-10
+                          input#cname.form-control(name='fullname', minlength='5', type='text', required='')
+                      .form-group
+                        label.control-label.col-lg-2(for='cemail')
+                          | E-Mail 
+                          span.required *
+                        .col-lg-10
+                          input#cemail.form-control(type='email', name='email', required='')
+                      .form-group
+                        label.control-label.col-lg-2(for='curl') Website
+                        .col-lg-10
+                          input#curl.form-control(type='url', name='url')
+                      .form-group
+                        label.control-label.col-lg-2(for='cname')
+                          | Subject 
+                          span.required *
+                        .col-lg-10
+                          input#subject.form-control(name='subject', minlength='5', type='text', required='')
+                      .form-group
+                        label.control-label.col-lg-2(for='ccomment') Feedback
+                        .col-lg-10
+                          textarea#ccomment.form-control(name='comment', required='')
+                      .form-group
+                        .col-lg-offset-2.col-lg-10
+                          button.btn.btn-primary(type='submit') Save
+                          button.btn.btn-default(type='button') Cancel
+          .row
+            .col-lg-12
+              section.panel
+                header.panel-heading
+                  | Advanced Form validations
+                .panel-body
+                  .form
+                    form#register_form.form-validate.form-horizontal(method='get', action='')
+                      .form-group
+                        label.control-label.col-lg-2(for='fullname')
+                          | Full name 
+                          span.required *
+                        .col-lg-10
+                          input#fullname.form-control(name='fullname', type='text')
+                      .form-group
+                        label.control-label.col-lg-2(for='address')
+                          | Address 
+                          span.required *
+                        .col-lg-10
+                          input#address.form-control(name='address', type='text')
+                      .form-group
+                        label.control-label.col-lg-2(for='username')
+                          | Username 
+                          span.required *
+                        .col-lg-10
+                          input#username.form-control(name='username', type='text')
+                      .form-group
+                        label.control-label.col-lg-2(for='password')
+                          | Password 
+                          span.required *
+                        .col-lg-10
+                          input#password.form-control(name='password', type='password')
+                      .form-group
+                        label.control-label.col-lg-2(for='confirm_password')
+                          | Confirm Password 
+                          span.required *
+                        .col-lg-10
+                          input#confirm_password.form-control(name='confirm_password', type='password')
+                      .form-group
+                        label.control-label.col-lg-2(for='email')
+                          | Email 
+                          span.required *
+                        .col-lg-10
+                          input#email.form-control(name='email', type='email')
+                      .form-group
+                        label.control-label.col-lg-2.col-sm-3(for='agree')
+                          | Agree to Our Policy 
+                          span.required *
+                        .col-lg-10.col-sm-9
+                          input#agree.checkbox.form-control(type='checkbox', style='width: 20px', name='agree')
+                      .form-group
+                        .col-lg-offset-2.col-lg-10
+                          button.btn.btn-primary(type='submit') Save
+                          button.btn.btn-default(type='button') Cancel
+          // page end
+      // main content end
+    // container section end
+    // javascripts
+    script(src='js/jquery.js')
+    script(src='js/bootstrap.min.js')
+    // nice scroll
+    script(src='js/jquery.scrollTo.min.js')
+    script(src='js/jquery.nicescroll.js', type='text/javascript')
+    // jquery validate js
+    script(type='text/javascript', src='js/jquery.validate.min.js')
+    // custom form validation script for this page
+    script(src='js/form-validation-script.js')
+    // custome script for all page
+    script(src='js/scripts.js')
