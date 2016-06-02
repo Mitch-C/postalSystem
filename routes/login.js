@@ -43,26 +43,14 @@ router.get('/query', function (req, res, next) {
   
     match = i;
     console.log('WE HAVE A MATCH');
-    //res.redirect('/index');
+    res.redirect('/index');
     //return;
   } 
   }
- if(match == -1){
-	 console.log('NO MATCH');
-     res.redirect('/404');
- }
- else{
-//logged in table stuff starts
-    client.query('UPDATE Loggedin SET Uid= '+(match+1)+' WHERE Rowide = 1',function(errr,resu){
-      if(errr) {throw errr;}
-      console.log("loginid = "+resu);
-     // localStorage.setItem("username",username);
-     // localStorage.setItem("lin",'no');
-      res.redirect('/index');
-      return;
-    });
-    //logged in table stuff ends
- }
+  if(match==-1){
+   res.redirect('/404');
+   }
+
 
 });
   });
