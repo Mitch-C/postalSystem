@@ -1,5 +1,1160 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='description', content='Creative - Bootstrap 3 Responsive Admin Template')
+    |     
+    meta(name='author', content='GeeksLabs')
+    |     
+    meta(name='keyword', content='Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal')
+    |     
+    link(rel='shortcut icon', href='images/favicon.png')
+    |     
+    title KPS
+    // Bootstrap CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    // bootstrap theme
+    link(href='stylesheets/bootstrap-theme.css', rel='stylesheet')
+    // external css
+    // font icon
+    link(href='stylesheets/elegant-icons-style.css', rel='stylesheet')
+    |     
+    link(href='stylesheets/font-awesome.min.css', rel='stylesheet')
+    // full calendar css
+    link(href='stylesheets/fullcalendar.css', rel='stylesheet')
+    | &#x9;
+    link(href='assets/fullcalendar/fullcalendar/fullcalendar.css', rel='stylesheet')
+    // easy pie chart
+    link(href='assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css', rel='stylesheet', type='text/css', media='screen')
+    // owl carousel
+    link(rel='stylesheet', href='stylesheets/owl.carousel.css', type='text/css')
+    | &#x9;
+    link(href='stylesheets/jquery-jvectormap-1.2.2.css', rel='stylesheet')
+    // Custom styles
+    link(rel='stylesheet', href='stylesheets/fullcalendar.css')
+    | &#x9;
+    link(href='stylesheets/widgets.css', rel='stylesheet')
+    |     
+    link(href='stylesheets/style.css', rel='stylesheet')
+    |     
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    | &#x9;
+    link(href='stylesheets/xcharts.min.css', rel=' stylesheet')
+    | &#x9;
+    | &#x9;
+    link(href='stylesheets/jquery-ui-1.10.4.min.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5
+    //if lt IE 9
+      script(src='javascripts/js/html5shiv.js')
+      |       
+      script(src='javascripts/js/respond.min.js')
+      |       
+      script(src='javascripts/js/lte-ie7.js')
+  |   
+body
+    // container section start
+    section#container
+      header.header.dark-bg
+        .toggle-nav
+          .icon-reorder.tooltips(data-original-title='Toggle Navigation', data-placement='bottom')
+            i.icon_menu
+        // logo start
+        a.logo(href='/index')
+          | K
+          span.lite PS
+        // logo end
+        #top_menu.nav.search-row
+          // search form start
+          ul.nav.top-menu
+            li
+              form.navbar-form
+                input.form-control(placeholder='Search', type='text')
+          // search form end
+        |             
+        .top-nav.notification-row
+          // notificatoin dropdown start
+          ul.nav.pull-right.top-menu
+            // task notificatoin start
+            li#task_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.icon-task-l
+                  span.badge.bg-important 6
+              |                         
+              ul.dropdown-menu.extended.tasks-bar
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 6 pending letter
+                |                             
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Design PSD 
+                      |                                         
+                      .percent 90%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100', style='width: 90%')
+                        span.sr-only 90% Complete (success)
+                |                             
+                li
+                  a(href='#')
+                    .task-info
+                      .desc
+                        | Project 1
+                      |                                         
+                      .percent 30%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100', style='width: 30%')
+                        span.sr-only 30% Complete (warning)
+                |                             
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Digital Marketing
+                      |                                         
+                      .percent 80%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                |                             
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Logo Designing
+                      |                                         
+                      .percent 78%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%')
+                        span.sr-only 78% Complete (danger)
+                |                             
+                li
+                  a(href='#')
+                    .task-info
+                      .desc Mobile App
+                      |                                         
+                      .percent 50%
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 50%')
+                        span.sr-only 50% Complete
+                |                             
+                li.external
+                  a(href='#') See All Tasks
+            // task notificatoin end
+            // inbox notificatoin start
+            li#mail_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-envelope-l
+                |                             
+                span.badge.bg-important 5
+              |                         
+              ul.dropdown-menu.extended.inbox
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 5 new messages
+                |                             
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./images/avatar-mini.jpg')
+                    |                                     
+                    span.subject
+                      span.from Greg  Martin
+                      |                                     
+                      span.time 1 min
+                    |                                     
+                    span.message
+                      | I really like this admin panel.
+                |                             
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./images/avatar-mini2.jpg')
+                    |                                     
+                    span.subject
+                      span.from Bob   Mckenzie
+                      |                                     
+                      span.time 5 mins
+                    |                                     
+                    span.message
+                      | Hi, What is next project plan?
+                |                             
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./images/avatar-mini3.jpg')
+                    |                                     
+                    span.subject
+                      span.from Phillip   Park
+                      |                                     
+                      span.time 2 hrs
+                    |                                     
+                    span.message
+                      | I am like to buy this Admin Template.
+                |                             
+                li
+                  a(href='#')
+                    span.photo
+                      img(alt='avatar', src='./images/avatar-mini4.jpg')
+                    |                                     
+                    span.subject
+                      span.from Ray   Munoz
+                      |                                     
+                      span.time 1 day
+                    |                                     
+                    span.message
+                      | Icon fonts are great.
+                |                             
+                li
+                  a(href='#') See all messages
+            // inbox notificatoin end
+            // alert notification start
+            li#alert_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-bell-l
+                |                             
+                span.badge.bg-important 7
+              |                         
+              ul.dropdown-menu.extended.notification
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 4 new notifications
+                |                             
+                li
+                  a(href='#')
+                    span.label.label-primary
+                      i.icon_profile
+                    |  
+                    |                                     Friend Request
+                    |                                     
+                    span.small.italic.pull-right 5 mins
+                |                             
+                li
+                  a(href='#')
+                    span.label.label-warning
+                      i.icon_pin
+                    |   
+                    |                                     John location.
+                    |                                     
+                    span.small.italic.pull-right 50 mins
+                |                             
+                li
+                  a(href='#')
+                    span.label.label-danger
+                      i.icon_book_alt
+                    |  
+                    |                                     Project 3 Completed.
+                    |                                     
+                    span.small.italic.pull-right 1 hr
+                |                             
+                li
+                  a(href='#')
+                    span.label.label-success
+                      i.icon_like
+                    |  
+                    |                                     Mick appreciated your work.
+                    |                                     
+                    span.small.italic.pull-right  Today
+                |                             
+                |                             
+                li
+                  a(href='#') See all notifications
+            // alert notification end
+            // user login dropdown start
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.profile-ava
+                  img(alt='', src='images/avatar1_small.jpg')
+                |                             
+                span.username Jenifer Smith
+                |                             
+                b.caret
+              |                         
+              ul.dropdown-menu.extended.logout
+                .log-arrow-up
+                |                             
+                li.eborder-top
+                  a(href='#')
+                    i.icon_profile
+                    |  My Profile
+                |                             
+                li
+                  a(href='#')
+                    i.icon_mail_alt
+                    |  My Inbox
+                |                             
+                li
+                  a(href='#')
+                    i.icon_clock_alt
+                    |  Timeline
+                |                             
+                li
+                  a(href='#')
+                    i.icon_chat_alt
+                    |  Chats
+                |                             
+                li
+                  a(href='login.html')
+                    i.icon_key_alt
+                    |  Log Out
+                |                             
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+                |                             
+                li
+                  a(href='documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+            // user login dropdown end
+          // notificatoin dropdown end
+      // header end
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul.sidebar-menu
+            li.active
+              a(href='/index')
+                i.icon_house_alt
+                |                           
+                span Dashboard
+            | &#x9;&#x9;&#x9;&#x9;  
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_document_alt
+                |                           
+                span Forms
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='form_component.html') Form Elements
+                |                           
+                |                           
+                li
+                  a(href='form_validation.html') Form Validation
+            |        
+            |                   
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_desktop
+                |                           
+                span UI Fitures
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='general.html') Elements
+                |                           
+                li
+                  a(href='buttons.html') Buttons
+                |                           
+                li
+                  a(href='grids.html') Grids
+            |                   
+            li
+              a(href='widgets.html')
+                i.icon_genius
+                |                           
+                span Widgets
+            |                   
+            li
+              a(href='chart-chartjs.html')
+                i.icon_piechart
+                |                           
+                span Charts
+            |                              
+            |                   
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_table
+                |                           
+                span Tables
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='basic_table.html') Basic Table
+            |                   
+            |                   
+            li.sub-menu
+              a(href='javascript:;')
+                i.icon_documents_alt
+                |                           
+                span Pages
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='profile.html') Profile
+                |                           
+                li
+                  a(href='login.html')
+                    span Login Page
+                |                           
+                li
+                  a(href='blank.html') Blank Page
+                |                           
+                li
+                  a(href='404.html') 404 Error
+          // sidebar menu end
+      // sidebar end
+      // main content start
+      section#main-content
+        section.wrapper
+          // overview start
+          .row
+            .col-lg-12
+              h3.page-header
+                i.
+                |  Dashboard
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              ol.breadcrumb
+                li
+                  i.fa.fa-home
+                  a(href='/index') Home
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa.fa-laptop
+                  | Dashboard
+          |               
+          |             
+          .row
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              .info-box.blue-bg
+                i.fa.fa-cloud-download
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .count 6.674
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .title Download
+              // /.info-box
+            // /.col
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              .info-box.brown-bg
+                i.fa.fa-shopping-cart
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .count 7.538
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .title Purchased
+              // /.info-box
+            // /.col
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              .info-box.dark-bg
+                i.fa.fa-thumbs-o-up
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .count 4.362
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .title Order
+              // /.info-box
+            // /.col
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              .info-box.green-bg
+                i.fa.fa-cubes
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .count 1.426
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .title Stock
+              // /.info-box
+            // /.col
+          // /.row
+          .row
+            .col-lg-9.col-md-12
+              .panel.panel-default
+                .panel-heading
+                  h2
+                    i.fa.fa-map-marker.red
+                    strong Countries
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .panel-actions
+                    a.btn-setting(href='/index#')
+                      i.fa.fa-rotate-right
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    a.btn-minimize(href='/index#')
+                      i.fa.fa-chevron-up
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    a.btn-close(href='/index#')
+                      i.fa.fa-times
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .panel-body-map
+                  #map(style='height:380px;')
+            |               
+            .col-md-3
+              // List starts
+              ul.today-datas
+                // List #1
+                li
+                  // Graph
+                  div
+                    span#todayspark1.spark
+                  // Text
+                  .datas-text 11,500 visitors/day
+                |                 
+                li
+                  div
+                    span#todayspark2.spark
+                  |                   
+                  .datas-text 15,000 Pageviews
+                |                 
+                li
+                  div
+                    span#todayspark3.spark
+                  |                   
+                  .datas-text 30.55% Bounce Rate
+                |                 
+                li
+                  div
+                    span#todayspark4.spark
+                  |                   
+                  .datas-text $16,00 Revenue/Day
+                |  
+                |                 
+                li
+                  div
+                    span#todayspark5.spark
+                  |                   
+                  .datas-text 12,000000 visitors every Month
+          // Today status end
+          .row
+            .col-lg-9.col-md-12
+              .panel.panel-default
+                .panel-heading
+                  h2
+                    i.fa.fa-flag-o.red
+                    strong Registered Users
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .panel-actions
+                    a.btn-setting(href='/index#')
+                      i.fa.fa-rotate-right
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    a.btn-minimize(href='/index#')
+                      i.fa.fa-chevron-up
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    a.btn-close(href='/index#')
+                      i.fa.fa-times
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .panel-body
+                  table.table.bootstrap-datatable.countries
+                    thead
+                      tr
+                        th
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        th Country
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        th Users
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        th Online
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        th Performance
+                    |    
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    tbody
+                      tr
+                        td
+                          img(src='images/Germany.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td Germany
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 2563
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 1025
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='73', aria-valuemin='0', aria-valuemax='100', style='width: 73%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='27', aria-valuemin='0', aria-valuemax='100', style='width: 27%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 73%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/India.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td India
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 3652
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 2563
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='57', aria-valuemin='0', aria-valuemax='100', style='width: 57%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='43', aria-valuemin='0', aria-valuemax='100', style='width: 43%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 57%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/Spain.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td Spain
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 562
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 452
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='93', aria-valuemin='0', aria-valuemax='100', style='width: 93%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='7', aria-valuemin='0', aria-valuemax='100', style='width: 7%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 93%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/India.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td Russia
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 1258
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 958
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 20%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/Spain.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td USA
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 4856
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 3621
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 20%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/Germany.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td Brazil
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 265
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 102
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 20%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/Germany.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td Coloumbia
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 265
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 102
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 20%
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      tr
+                        td
+                          img(src='images/Germany.png', style='height:18px; margin-top:-2px;')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td France
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 265
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td 102
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        td
+                          .progress.thin
+                            .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.sr-only 20%
+            // /col
+            .col-md-3
+              .social-box.facebook
+                i.fa.fa-facebook
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul
+                  li
+                    strong 256k
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span friends
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    strong 359
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span feeds
+              // /social-box
+            | &#x9;&#x9;&#x9;&#x9;
+            .col-md-3
+              .social-box.google-plus
+                i.fa.fa-google-plus
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul
+                  li
+                    strong 962
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span followers
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    strong 256
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span circles
+              // /social-box
+            // /col
+            .col-md-3
+              .social-box.twitter
+                i.fa.fa-twitter
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul
+                  li
+                    strong 1562k
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span followers
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    strong 2562
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span tweets
+              // /social-box
+            // /col
+          // statics end
+          // project team & activity start
+          .row
+            .col-md-4.portlets
+              // Widget
+              .panel.panel-default
+                .panel-heading
+                  .pull-left Message
+                  |                   
+                  .widget-icons.pull-right
+                    a.wminimize(href='#')
+                      i.fa.fa-chevron-up
+                    |  
+                    |                     
+                    a.wclose(href='#')
+                      i.fa.fa-times
+                  |   
+                  |                   
+                  .clearfix
+                |                 
+                .panel-body
+                  // Widget content
+                  .padd.sscroll
+                    ul.chats
+                      // Chat by us. Use the class "by-me".
+                      li.by-me
+                        // Use the class "pull-left" in avatar
+                        .avatar.pull-left
+                          img(src='images/user.jpg', alt='')
+                        |                         
+                        .chat-content
+                          // In meta area, first include "name" and then "time"
+                          .chat-meta
+                            | John Smith 
+                            span.pull-right 3 hours ago
+                          |                           Vivamus diam elit diam, consectetur dapibus adipiscing elit.
+                          |                           
+                          .clearfix
+                      // Chat by other. Use the class "by-other".
+                      li.by-other
+                        // Use the class "pull-right" in avatar
+                        .avatar.pull-right
+                          img(src='images/user22.png', alt='')
+                        |                         
+                        .chat-content
+                          // In the chat meta, first include "time" then "name"
+                          .chat-meta
+                            | 3 hours ago 
+                            span.pull-right Jenifer Smith
+                          |                           Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit.
+                          |                           
+                          .clearfix
+                      |    
+                      |                       
+                      li.by-me
+                        .avatar.pull-left
+                          img(src='images/user.jpg', alt='')
+                        |                         
+                        .chat-content
+                          .chat-meta
+                            | John Smith 
+                            span.pull-right 4 hours ago
+                          |                           Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
+                          |                           
+                          .clearfix
+                      |   
+                      |                       
+                      li.by-other
+                        // Use the class "pull-right" in avatar
+                        .avatar.pull-right
+                          img(src='images/user22.png', alt='')
+                        |                         
+                        .chat-content
+                          // In the chat meta, first include "time" then "name"
+                          .chat-meta
+                            | 3 hours ago 
+                            span.pull-right Jenifer Smith
+                          |                           Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
+                          |                           
+                          .clearfix
+                  // Widget footer
+                  .widget-foot
+                    form.form-inline
+                      .form-group
+                        input.form-control(type='text', placeholder='Type your message here...')
+                      |                         
+                      button.btn.btn-info(type='submit') Send
+            |                   
+            .col-lg-8
+              // Project Activity start
+              section.panel
+                .panel-body.progress-panel
+                  .row
+                    .col-lg-8.task-progress.pull-left
+                      h1 To Do Everyday
+                    |                               
+                    .col-lg-4
+                      span.profile-ava.pull-right
+                        img.simple(alt='', src='images/avatar1_small.jpg')
+                        |                                         Jenifer smith
+                |                           
+                table.table.table-hover.personal-task
+                  tbody
+                    tr
+                      td Today
+                      |                                   
+                      td
+                        | web design
+                      |                                   
+                      td
+                        span.badge.bg-important Upload
+                      |                                   
+                      td
+                        span.profile-ava
+                          img.simple(alt='', src='images/avatar1_small.jpg')
+                    |                               
+                    tr
+                      td Yesterday
+                      |                                   
+                      td
+                        | Project Design Task
+                      |                                   
+                      td
+                        span.badge.bg-success Task
+                      |                                   
+                      td
+                        #work-progress2
+                    |                               
+                    tr
+                      td 21-10-14
+                      |                                   
+                      td
+                        | Generate Invoice
+                      |                                   
+                      td
+                        span.badge.bg-success Task
+                      |                                   
+                      td
+                        #work-progress3
+                    |                               
+                    |                               
+                    tr
+                      td 22-10-14
+                      |                                   
+                      td
+                        | Project Testing
+                      |                                   
+                      td
+                        span.badge.bg-primary To-Do
+                      |                                   
+                      td
+                        span.profile-ava
+                          img.simple(alt='', src='images/avatar1_small.jpg')
+                    |                               
+                    tr
+                      td 24-10-14
+                      |                                   
+                      td
+                        | Project Release Date
+                      |                                   
+                      td
+                        span.badge.bg-info Milestone
+                      |                                   
+                      td
+                        #work-progress4
+                    |                               
+                    |                               
+                    tr
+                      td 28-10-14
+                      |                                   
+                      td
+                        | Project Release Date
+                      |                                   
+                      td
+                        span.badge.bg-primary To-Do
+                      |                                   
+                      td
+                        #work-progress5
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  
+                    tr
+                      td Last week
+                      |                                   
+                      td
+                        | Project Release Date
+                      |                                   
+                      td
+                        span.badge.bg-primary To-Do
+                      |                                   
+                      td
+                        #work-progress1
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  
+                    tr
+                      td last month
+                      |                                   
+                      td
+                        | Project Release Date
+                      |                                   
+                      td
+                        span.badge.bg-success To-Do
+                      |                                   
+                      td
+                        span.profile-ava
+                          img.simple(alt='', src='images/avatar1_small.jpg')
+              // Project Activity end
+          br
+          br
+          | &#x9;&#x9;
+          | &#x9;&#x9;
+          .row
+            .col-md-6.portlets
+              .panel.panel-default
+                .panel-heading
+                  h2
+                    strong Calendar
+                  | &#x9;&#x9;&#x9;&#x9;
+                  .panel-actions
+                    a.wminimize(href='#')
+                      i.fa.fa-chevron-up
+                    |  
+                    |                     
+                    a.wclose(href='#')
+                      i.fa.fa-times
+                br
+                br
+                br
+                |                 
+                .panel-body
+                  // Widget content
+                  // Below line produces calendar. I am using FullCalendar plugin.
+                  #calendar
+            | &#x9;&#x9;&#x9;
+            | &#x9;&#x9;&#x9;&#x9; 
+            .col-md-6.portlets
+              .panel.panel-default
+                .panel-heading
+                  .pull-left Quick Post
+                  |                   
+                  .widget-icons.pull-right
+                    a.wminimize(href='#')
+                      i.fa.fa-chevron-up
+                    |  
+                    |                     
+                    a.wclose(href='#')
+                      i.fa.fa-times
+                  |   
+                  |                   
+                  .clearfix
+                |                 
+                .panel-body
+                  .padd
+                    .form.quick-post
+                      // Edit profile form (not working)
+                      form.form-horizontal
+                        // Title
+                        .form-group
+                          label.control-label.col-lg-2(for='title') Title
+                          |                                             
+                          .col-lg-10
+                            input#title.form-control(type='text')
+                        // Content
+                        .form-group
+                          label.control-label.col-lg-2(for='content') Content
+                          |                                             
+                          .col-lg-10
+                            textarea#content.form-control
+                        // Cateogry
+                        .form-group
+                          label.control-label.col-lg-2 Category
+                          |                                             
+                          .col-lg-10
+                            select.form-control
+                              option(value='') - Choose Cateogry -
+                              |                                                   
+                              option(value='1') General
+                              |                                                   
+                              option(value='2') News
+                              |                                                   
+                              option(value='3') Media
+                              |                                                   
+                              option(value='4') Funny
+                        // Tags
+                        .form-group
+                          label.control-label.col-lg-2(for='tags') Tags
+                          |                                             
+                          .col-lg-10
+                            input#tags.form-control(type='text')
+                        // Buttons
+                        .form-group
+                          // Buttons
+                          .col-lg-offset-2.col-lg-9
+                            button.btn.btn-primary(type='submit') Publish
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            button.btn.btn-danger(type='submit') Save Draft
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            button.btn.btn-default(type='reset') Reset
+                  |                   
+                  .widget-foot
+                    // Footer goes here
+          // project team & activity end
+      // main content end
+    // container section start
+    // javascripts
+    script(src='javascripts/js//jquery.js')
+    | &#x9;
+    script(src='javascripts/js//jquery-ui-1.10.4.min.js')
+    |     
+    script(src='javascripts/js//jquery-1.8.3.min.js')
+    |     
+    script(type='text/javascript', src='javascripts/js/jquery-ui-1.9.2.custom.min.js')
+    // bootstrap
+    script(src='javascripts/js//bootstrap.min.js')
+    // nice scroll
+    script(src='javascripts/js//jquery.scrollTo.min.js')
+    |     
+    script(src='javascripts/js//jquery.nicescroll.js', type='text/javascript')
+    // charts scripts
+    script(src='assets/jquery-knob/js/jquery.knob.js')
+    |     
+    script(src='javascripts/js//jquery.sparkline.js', type='text/javascript')
+    |     
+    script(src='assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js')
+    |     
+    script(src='javascripts/js//owl.carousel.js')
+    // jQuery full calendar
+    | &lt;
+    script(src='javascripts/js//fullcalendar.min.js')
+    // Full Google Calendar - Calendar
+    script(src='assets/fullcalendar/fullcalendar/fullcalendar.js')
+    // script for this page only
+    script(src='javascripts/js//calendar-custom.js')
+    | &#x9;
+    script(src='javascripts/js//jquery.rateit.min.js')
+    // custom select
+    script(src='javascripts/js//jquery.customSelect.min.js')
+    | &#x9;
+    script(src='assets/chart-master/Chart.js')
+    // custome script for all page
+    script(src='javascripts/js/scripts.js')
+    // custom script for this page
+    script(src='javascripts/js/sparkline-chart.js')
+    |     
+    script(src='javascripts/js/easy-pie-chart.js')
+    | &#x9;
+    script(src='javascripts/js/jquery-jvectormap-1.2.2.min.js')
+    | &#x9;
+    script(src='javascripts/js/jquery-jvectormap-world-mill-en.js')
+    | &#x9;
+    script(src='javascripts/js/xcharts.min.js')
+    | &#x9;
+    script(src='javascripts/js/jquery.autosize.min.js')
+    | &#x9;
+    script(src='javascripts/js/jquery.placeholder.min.js')
+    | &#x9;
+    script(src='javascripts/js/gdp-data.js')
+    | &#x9;
+    | &#x9;
+    script(src='javascripts/js/morris.min.js')
+    | &#x9;
+    script(src='javascripts/js/sparklines.js')
+    | &#x9;
+    | &#x9;
+    script(src='javascripts/js/charts.js')
+    | &#x9;
+    script(src='javascripts/js/jquery.slimscroll.min.js')
+    |   
+    script.
+      //knob
+      $(function() {
+      $(".knob").knob({
+      'draw' : function () {
+      $(this.i).val(this.cv + '%')
+      }
+      })
+      });
+      //carousel
+      $(document).ready(function() {
+      $("#owl-slider").owlCarousel({
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+      });
+      });
+      //custom select box
+      $(function(){
+      $('select.styled').customSelect();
+      });
+      /* ---------- Map ---------- */
+      $(function(){
+      $('#map').vectorMap({
+      map: 'world_mill_en',
+      series: {
+      regions: [{
+      values: gdpData,
+      scale: ['#000', '#000'],
+      normalizeFunction: 'polynomial'
+      }]
+      },
+      backgroundColor: '#eef3f7',
+      onLabelShow: function(e, el, code){
+      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+      }
+      });
+      });
