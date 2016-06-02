@@ -25,22 +25,22 @@ html(lang='en')
       script(src='javascripts/js/respond.min.js')
   body.login-img3-body
     .container
-      form.login-form(action='/index')
+      form.login-form(action='/login/query'  ,method='get')
         .login-wrap
           p.login-img
             i.icon_lock_alt
           .input-group
             span.input-group-addon
               i.icon_profile
-            input.form-control(type='text', placeholder='Username', autofocus='')
+            input.form-control(type='text', placeholder='Username', autofocus='', name='username')
           .input-group
             span.input-group-addon
               i.icon_key_alt
-            input.form-control(type='password', placeholder='Password')
+            input.form-control(type='password', placeholder='Password' , name='password')
           label.checkbox
             input(type='checkbox', value='remember-me')
             |  Remember me
             span.pull-right
               a(href='#')  Forgot Password?
           button.btn.btn-primary.btn-lg.btn-block(type='submit') Login
-          button.btn.btn-info.btn-lg.btn-block(type='submit') Signup
+          
